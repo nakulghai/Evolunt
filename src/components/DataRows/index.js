@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import List from './../Atoms/List';
 
 const DataRows = ({
@@ -28,8 +28,7 @@ const DataRows = ({
 									defaultLastName={ data.lastName }
 									defaultEmail={ data.email }
 									defaultPhoneNumber={ data.phoneNumber }
-									defaultStatus={ data.radio }
-									id={ data.id }
+									defaultStatus={ data.radio }									
 									editSubmitButton={ editSubmitButton }
 									editFlag= {editFlag}									
 								/>

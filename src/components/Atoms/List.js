@@ -38,17 +38,6 @@ class List extends Component {
 		this.setState({editFlag: !this.state.editFlag})
 	}
 	render() {
-		const {
-			firstName,
-			lastName,
-			email,
-			phoneNumber,
-			status,
-			id,
-			onDelete,
-			onEdit
-		} = this.props;
-
 		return(
 			<div>
 				<tr>

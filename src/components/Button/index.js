@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const Button = ({
 	button,
@@ -9,7 +9,7 @@ const Button = ({
 	}
 	return(
 		<div>
-			<button onClick={onSubmit}>
+			<button onClick={onClick}>
 				{button}
 			</button>
 		</div>

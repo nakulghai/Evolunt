@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const TextBox = ({
 	id,
@@ -15,8 +15,7 @@ const TextBox = ({
 	}
 	const handleBlur = (event) => {
 		onBlur(event.target.value, id);
-	}
-	const showErrorFlag = !showError && showError !== 'NOT-TOUCHED';
+	}	
 	return(
 		<div>
 			<label htmlFor={id}>
