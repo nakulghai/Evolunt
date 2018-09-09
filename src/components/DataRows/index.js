@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import List from './../Atoms/List';
-import EditForm from './../EditForm';
 
 const DataRows = ({
 	data,
@@ -11,11 +10,11 @@ const DataRows = ({
 }) => {
 	return(
 			<div>
-			<table>
+				<table>
 				{
 					data.map((data, index) => {
 						return (
-							<div>
+							<div key = { index }>
 								<List 
 									firstName={ data.firstName }
 									lastName={ data.lastName }
@@ -32,10 +31,10 @@ const DataRows = ({
 									defaultStatus={ data.radio }
 									id={ data.id }
 									editSubmitButton={ editSubmitButton }
-									editFlag= {editFlag}
+									editFlag= {editFlag}									
 								/>
 							</div>
-							)
+						)
 					})
 				}
 				</table>
@@ -44,17 +43,3 @@ const DataRows = ({
 }
 
 export default DataRows;
-
-
-// {
-// 									editFlag &&
-// 									<EditForm 
-// 										defaultFirstName={ data.firstName }
-// 										defaultLastName={ data.lastName }
-// 										defaultEmail={ data.email }
-// 										defaultPhoneNumber={ data.phoneNumber }
-// 										defaultStatus={ data.radio }
-// 										id={ data.id }
-// 										editSubmitButton={ editSubmitButton }
-// 									/>
-// 								}

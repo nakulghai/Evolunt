@@ -7,7 +7,8 @@ const TextBox = ({
 	onChange,
 	onBlur,
 	showError,
-	value
+	value,
+	errorMessage
 }) => {
 	const handleChange = (event) => {
 		onChange(event.target.value, id);
@@ -32,7 +33,7 @@ const TextBox = ({
 			{
 			showError && 
 				<span>
-					Error
+					{errorMessage}
 				</span>
 			}
 		</div>

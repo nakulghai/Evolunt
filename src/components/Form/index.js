@@ -132,7 +132,8 @@ class Form extends Component {
             id="firstName"
             name="firstName"
             showError={!this.state.firstNameValid}
-            value={this.state.firstName || ''}            
+            value={this.state.firstName || ''} 
+            errorMessage="Please enter correct First Name"           
           />
           <TextBox 
             label="Last Name"
@@ -141,7 +142,8 @@ class Form extends Component {
             id="lastName"
             name="lastName"
             showError={!this.state.lastNameValid}
-            value={this.state.lastName || ''}            
+            value={this.state.lastName || ''} 
+            errorMessage="Please enter correct Last Name"           
           />
           <TextBox 
             label="Email"
@@ -150,7 +152,8 @@ class Form extends Component {
             id="email"
             name="email"
             showError={!this.state.emailValid}
-            value={this.state.email || ''}            
+            value={this.state.email || ''}  
+            errorMessage="Please enter correct Email"          
           />
           <TextBox 
             label="Phone NUmber"
@@ -159,15 +162,18 @@ class Form extends Component {
             id="phoneNumber"
             name="phoneNumber"
             showError={!this.state.phoneNumberValid}
-            value={this.state.phoneNumber || ''}            
+            value={this.state.phoneNumber || ''} 
+            errorMessage="Please enter correct Phone Number"           
           />
           <RadioGroup
             onChange={this.handleChange}
             radioOptions={RADIO_OPTIONS}
             showError={!this.state.radioValid}
             value={this.state.radio}
+            errorMessage="Please enter atleast one radio button"
           />
-          <Button 
+          <Button
+            button="Submit" 
             onSubmit={this.handleSubmit}
           />
           <DataRows 

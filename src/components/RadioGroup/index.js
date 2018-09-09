@@ -18,20 +18,21 @@ class RadioGroup extends Component {
 		return(
 			<div>
 				{
-					radioOptions.map((radio,key) => {
+					radioOptions.map((radio,index) => {
 						return (<Radio 
 									id={radio.id}
 									label={radio.label}
 									onClick={this.handleClick}
 									checked={this.state.checked}
 									value={value}
+									key={index}
 								/>);
 					})
 				}
 				{
 				showError && 
 					<span>
-						Error
+						{this.props.errorMessage}
 					</span>
 				}
 			</div>
