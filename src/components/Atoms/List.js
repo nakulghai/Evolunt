@@ -40,6 +40,9 @@ class List extends Component {
 	render() {
 		return(
 			<div>
+				<h4>
+		            Form Data
+	          	</h4>
 				<tr>
 					<td>
 						{ this.props.defaultFirstName }
@@ -57,10 +60,18 @@ class List extends Component {
 						{ this.props.defaultStatus }
 					</td>
 					<td>
-						<button onClick={this.handleEdit}>Edit</button>
+						<button 
+							className="btn waves-effect waves-light"
+							onClick={this.handleEdit}>
+							Edit
+						</button>
 					</td>
 					<td>
-						<button onClick={this.handleDelete}>Delete</button>
+						<button 
+							className="btn waves-effect waves-light"
+							onClick={this.handleDelete}>
+							Delete
+						</button>
 					</td>
 				</tr>
 				{
@@ -103,7 +114,9 @@ class List extends Component {
 							/>			
 						</td>
 						<td>
-						<button onClick={this.handleSubmit}>
+						<button
+							className="btn waves-effect waves-light" 
+							onClick={this.handleSubmit}>
 							Submit
 						</button>
 						</td>

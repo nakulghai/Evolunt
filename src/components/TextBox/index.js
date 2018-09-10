@@ -17,11 +17,9 @@ const TextBox = ({
 		onBlur(event.target.value, id);
 	}	
 	return(
-		<div>
-			<label htmlFor={id}>
-				{label}
-			</label>
+		<div className="input-field col s6">						
 			<input
+				className="validate"
 				onBlur={handleBlur}
 				onChange={handleChange}
 				type="text"
@@ -29,9 +27,12 @@ const TextBox = ({
 				name={name}
 				value={value}				
 			/>
+			<label className="active" htmlFor={id}>
+				{label}
+			</label>			
 			{
 			showError && 
-				<span>
+				<span className="helper-text" data-error="wrong">
 					{errorMessage}
 				</span>
 			}

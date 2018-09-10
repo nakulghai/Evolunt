@@ -9,7 +9,10 @@ const Button = ({
 	}
 	return(
 		<div>
-			<button onClick={onClick}>
+			<button
+				className="btn waves-effect waves-light" 
+				onClick={onClick}
+			>
 				{button}
 			</button>
 		</div>

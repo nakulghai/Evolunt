@@ -5,6 +5,7 @@
   "dependencies": {
     "chai-spies": "^1.0.0",
     "expect": "^23.5.0",
+    "materialize-css": "^1.0.0-rc.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-redux": "^5.0.7",

@@ -11,17 +11,18 @@ const Radio = ({
 		onClick(id);
 	}
 	return(
-		<div>
-			<label htmlFor={id}>
-				{label}
+		<p>
+			<label htmlFor={id}>						
+				<input
+					className="with-gap"
+					checked={checked === id && value === id}
+					id={id} 
+					type="radio"
+					onClick={handleClick}
+				/>
+				<span>{label}</span>
 			</label>
-			<input
-				checked={checked === id && value === id}
-				id={id} 
-				type="radio"
-				onClick={handleClick}
-			/>
-		</div>
+		</p>
 		);
 }
 

@@ -8,7 +8,7 @@ import Button from './index';
 const handleClick = sinon.spy();
 const wrapper = shallow(<Button 
 		button="test"
-		onClick={handleClick}	
+		onSubmit={handleClick}	
 	/>)
 
 	describe('Button Component', () => {
